@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.content{
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+.content__wrapper{
+    padding: 50px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.bracket{
+    overflow: auto;
+}
+
+.rounds-list{
+    display: flex;
+}
+
+.round__item{
+    margin-left: 50px;
+    width: 185px;
+    display: flex;
+    flex-direction: column;
+}
+
+.round__item:first-child {
+    margin-left: auto;
+}
+
+.round__item:last-child {
+    margin-right: auto;
+}
+
+.round__header{
+    border-radius: 2px;
+    border: 1px solid #aaaaaa;
+    text-align: center;
+    background: #ebebeb;
+    line-height: 18px;
+}
+
+.match{
+    margin-top: 20px;
+    width: 100%;
+    flex: 1;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.team{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #aaaaaa;
+    background: #ebebeb;
+    position: relative;
+}
+
+.team__img{
+    height: 18px;
+    width: 18px;
+}
+.team__data{
+    width: 159px;
+    min-height: 26px;
+    display: flex;
+    align-items: center;
+    padding: 1px 15px;
+    border-right: 1px solid #aaaaaa;
+}
+
+.team__points{
+    width: 23px;
+    text-align: center;
+    position: relative;
+}
+
+.team__name{
+    color: #000000;
+    font-weight: bold;
+    line-height: 18px;
+    margin-left: 10px;
+}
+
+/* connections */
+.match:nth-child(2n):after{
+    content: '';
+    height: 50%;
+    width: 15px;
+    position: absolute;
+    right: -17px;
+    top: 50%;
+    border-top: 2px solid green;
+    border-right: 2px solid green;
+}
+
+.match:nth-child(2n + 1):after{
+    content: '';
+    height: 50%;
+    width: 15px;
+    position: absolute;
+    right: -17px;
+    bottom: 50%;
+    border-top: 2px solid green;
+    border-right: 2px solid green;
+    transform: rotateX(180deg);
+}
+
+.round__item:nth-child(n+2) .team:nth-child(2n+1):before{
+    content: '';
+    height: 2px;
+    width: 35px;
+    top: 17px;
+    left: -35px;
+    position: absolute;
+    background-color: green;
+}
+
+.round__item:nth-child(n+2) .team:nth-child(2n):before{
+    content: '';
+    height: 2px;
+    width: 35px;
+    top: 7px;
+    left: -35px;
+    position: absolute;
+    background-color: green;
+}
+
+.round__item:last-child .match::after{
+    content: none;
+}
+
