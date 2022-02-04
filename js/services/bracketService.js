@@ -49,8 +49,6 @@ const BracketService = class {
 
         return updatedRoundsList;
     }
-
-
 }
 
 export default BracketService;

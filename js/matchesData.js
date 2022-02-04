@@ -1,3 +1,3 @@
-const teamNum = 16;
+const teamNum = 128;
 
 export default teamNum;
